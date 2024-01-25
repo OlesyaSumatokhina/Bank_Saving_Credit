@@ -1,6 +1,7 @@
 import org.example.SavingAccount;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 public class SavingAccountTest {
 
@@ -81,6 +82,17 @@ public class SavingAccountTest {
         );
         boolean actual = false;
         boolean expected = payAccount.pay(2100);
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void showTruePayBalance() {
+        SavingAccount payAccount = new SavingAccount(
+                1_000,
+                0, 10_000, 5
+        );
+        boolean actual = true;
+        boolean expected = payAccount.pay(500);
         Assertions.assertEquals(actual, expected);
     }
 

@@ -40,9 +40,9 @@ public class CreditAccountTest {
                 15
         );
 
-        account.pay(3000);
+        account.pay(500);
 
-        Assertions.assertEquals(500, account.getBalance());
+        Assertions.assertEquals(3_000, account.getBalance());
     }
 
     @Test

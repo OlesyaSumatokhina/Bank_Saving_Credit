@@ -1,5 +1,4 @@
-package org.example;
-
+import org.example.SavingAccount;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -169,7 +168,7 @@ public class SavingAccountTest {
     public void showMinBalanse() {
         SavingAccount account = new SavingAccount(100, 10, 10_000, 5);
         account.setMinBalance(10);
-        int actual = account.minBalance;
+        int actual = account.getMinBalance();
         Assertions.assertEquals(10, actual);
     }
 
@@ -177,7 +176,7 @@ public class SavingAccountTest {
     public void showMaxBalance() {
         SavingAccount account = new SavingAccount(100, 10, 10_000, 5);
         account.setMaxBalance(10_000);
-        int actual = account.maxBalance;
+        int actual = account.getMaxBalance();
         Assertions.assertEquals(10_000, actual);
     }
 
